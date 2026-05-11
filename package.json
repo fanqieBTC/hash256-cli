@@ -1,0 +1,21 @@
+{
+  "name": "hash256-cli",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "HASH256 CLI miner — NVIDIA CUDA + Apple Metal + WASM fallback.",
+  "bin": {
+    "hash256": "./hash256-cli.js"
+  },
+  "scripts": {
+    "assets": "sh scripts/download-miner-assets.sh",
+    "build:metal": "sh build-metal.sh",
+    "build:cuda": "sh build-cuda.sh",
+    "bench": "node hash256-cli.js bench --engine auto --seconds 5",
+    "status": "node hash256-cli.js status"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "viem": "^2.38.0"
+  }
+}
